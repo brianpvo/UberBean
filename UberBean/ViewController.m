@@ -8,9 +8,13 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController () <MKMapViewDelegate>
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic) CLLocationManager *cLLManager;
+
 
 @end
 
@@ -19,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-   
+    self.cLLManager = [[CLLocationManager alloc] init];
+    [self.cLLManager requestWhenInUseAuthorization];
 }
 
 
