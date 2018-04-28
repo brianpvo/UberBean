@@ -8,6 +8,13 @@
 
 #import "Cafe.h"
 
+@interface Cafe ()
+
+@property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readwrite, copy, nullable) NSString *title;
+
+@end
+
 @implementation Cafe
 
 - (instancetype)initWithJSON:(NSDictionary *)json
@@ -25,8 +32,10 @@
     self.imageURL = self.cafeDict[@"image_url"];
     self.location = [[NSDictionary alloc] initWithDictionary:self.cafeDict[@"location"]];
     self.rating = self.cafeDict[@"rating"];
-    self.longitude = self.cafeDict[@"coordinates"][@"longitude"];
-    self.latitude = self.cafeDict[@"coordinates"][@"latitude"];
+    self.longitude = [self.cafeDict[@"coordinates"][@"longitude"] floatValue];
+    self.latitude = [self.cafeDict[@"coordinates"][@"latitude"] floatValue];
+    self.coordinate = CLLocationCoordinate2DMake(self.latitude, self.longitude);
+    self.title = self.cafeDict[@"title"];
 }
 
 @end
