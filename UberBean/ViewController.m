@@ -43,8 +43,11 @@
     
     NetworkManager *networkManager = [[NetworkManager alloc] init];
     [networkManager URLRequest:@"cafe" longitude:longitude latitude:latitude completion:^(NSMutableArray <Cafe *> *array) {
-    
-        NSLog(@"complete %@", array);
+        
+        for (Cafe *cafe in array) {
+            [self.mapView addAnnotation:cafe];
+        }
+        [self.mapView showAnnotations:array animated:YES];
     }];
     
 
@@ -65,6 +68,10 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     NSLog(@"here");
 }
+
+//-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+//
+//}
 
 
 - (void)didReceiveMemoryWarning {
