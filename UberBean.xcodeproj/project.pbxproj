@@ -14,6 +14,8 @@
 		7A8C9C912093A1B10029FCA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8C9C8F2093A1B10029FCA0 /* LaunchScreen.storyboard */; };
 		7A8C9C942093A1B10029FCA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C9C932093A1B10029FCA0 /* main.m */; };
 		7A8C9C9E2093A1B10029FCA0 /* UberBeanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C9C9D2093A1B10029FCA0 /* UberBeanTests.m */; };
+		7A8C9CAA2093E7A50029FCA0 /* Cafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C9CA92093E7A50029FCA0 /* Cafe.m */; };
+		7A8C9CAD2093EC020029FCA0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C9CAC2093EC020029FCA0 /* NetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		7A8C9C992093A1B10029FCA0 /* UberBeanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberBeanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8C9C9D2093A1B10029FCA0 /* UberBeanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UberBeanTests.m; sourceTree = "<group>"; };
 		7A8C9C9F2093A1B10029FCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A8C9CA82093E7A50029FCA0 /* Cafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cafe.h; sourceTree = "<group>"; };
+		7A8C9CA92093E7A50029FCA0 /* Cafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cafe.m; sourceTree = "<group>"; };
+		7A8C9CAB2093EC020029FCA0 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		7A8C9CAC2093EC020029FCA0 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,10 @@
 				7A8C9C8F2093A1B10029FCA0 /* LaunchScreen.storyboard */,
 				7A8C9C922093A1B10029FCA0 /* Info.plist */,
 				7A8C9C932093A1B10029FCA0 /* main.m */,
+				7A8C9CA82093E7A50029FCA0 /* Cafe.h */,
+				7A8C9CA92093E7A50029FCA0 /* Cafe.m */,
+				7A8C9CAB2093EC020029FCA0 /* NetworkManager.h */,
+				7A8C9CAC2093EC020029FCA0 /* NetworkManager.m */,
 			);
 			path = UberBean;
 			sourceTree = "<group>";
@@ -203,8 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8C9CAA2093E7A50029FCA0 /* Cafe.m in Sources */,
 				7A8C9C892093A1B00029FCA0 /* ViewController.m in Sources */,
 				7A8C9C942093A1B10029FCA0 /* main.m in Sources */,
+				7A8C9CAD2093EC020029FCA0 /* NetworkManager.m in Sources */,
 				7A8C9C862093A1B00029FCA0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

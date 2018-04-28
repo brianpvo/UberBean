@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "NetworkManager.h"
 
 @interface ViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 
@@ -31,11 +32,21 @@
     
     [self.mapView setShowsUserLocation:YES];
     
-    CLLocationCoordinate2D beginCoord = CLLocationCoordinate2DMake(49.281838, -123.108151);
-    MKCoordinateRegion myRegion = MKCoordinateRegionMakeWithDistance(beginCoord, 500, 500);
+    CLLocationCoordinate2D coordinate = self.cLLManager.location.coordinate;
+    CLLocationDegrees longitude = coordinate.longitude;
+    CLLocationDegrees latitude = coordinate.latitude;
+    
+    MKCoordinateRegion myRegion = MKCoordinateRegionMakeWithDistance(coordinate, 500, 500);
     [self.mapView setRegion:myRegion animated:YES];
     
     MKCoordinateSpanMake(0.06, 0.06);
+    
+    NetworkManager *networkManager = [[NetworkManager alloc] init];
+    [networkManager URLRequest:@"cafe" longitude:longitude latitude:latitude completion:^(NSMutableArray <Cafe *> *array) {
+    
+        NSLog(@"complete %@", array);
+    }];
+    
 
 }
 
